@@ -73,6 +73,38 @@ The output will be:
 ENV Test true
 ```
 
+Strict Mode allows you to run the same call as above but with an optional options object with a strict object boolean. Strict being enabled will remove any .env files that match the glob .ent pattern. For example:
+
+
+```bash
+//  Call Entourage Config Loading by *.ent
+entourage.config('**/*.ent', {
+	strict: true
+},function() {
+		
+	// Done Loading .ENT
+	console.log('ENV Test', process.env.TEST_ENV);
+});
+```
+
+Any .env files found matching the glob pattern will be found and removed with strict enabled.
+
+
+```bash
+The system deletes all found **/*.env files
+```
+
+The output will be:
+
+```bash
+ENV Test true
+```
+
+# Options
+
+Strict: boolean
+This option will remove any found .env files good for use in production environments where you want to ensure no .env files exist on the server running this module.
+
 # Conclusion
 
 Providing you create a secure enough key for Entourage to use and the user of your system is never exploited by a hacker to read your ENTOURAGE_KEY then, this should be secure enough to use in production environments. This has been tested and is in use in a production environment however, there is no guarantee your environment variables will remain secure since the decryption key is stored as an environment variable on the system you wish to deploy to. Use at your own risk. But!!! it should be safe so long as you can lock down your user level console on your deployed operating system (block ssh from public, disable PAM , and use a vpn for key based access).
