@@ -1,6 +1,6 @@
 {
   "name": "entourage",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A Secure production ready entourage for ENV variables",
   "main": "index.js",
   "scripts": {
