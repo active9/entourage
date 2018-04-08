@@ -100,6 +100,22 @@ The output will be:
 ENV Test true
 ```
 
+# API
+
+You can manually tie into the encrypt and decrypt features. By default if a key is passed as null the env ENTOURAGE_KEY will be used.
+
+Encrypting
+```bash
+// Encrypt An Entourage Encrypted String
+var encrypted = entourage.decrypt(null, 'raw .env file data here');
+```
+
+Decrypting
+```bash
+// Decrypt An Entourage Encrypted String
+var decrypted = entourage.decrypt(null, 'encrypted .ent file data here');
+```
+
 # Options
 
 Strict: boolean
