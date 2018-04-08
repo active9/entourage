@@ -107,7 +107,7 @@ You can manually tie into the encrypt and decrypt features. By default if a key 
 Encrypting
 ```bash
 // Encrypt An Entourage Encrypted String
-var encrypted = entourage.decrypt(null, 'raw .env file data here');
+var encrypted = entourage.encrypt(null, 'raw .env file data here');
 ```
 
 Decrypting
