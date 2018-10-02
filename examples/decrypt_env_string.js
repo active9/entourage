@@ -10,4 +10,4 @@ var encryptedData = 'ef39e79d24eced6809d99bc8f65ce598QtYchr35kP6PabfWFVjfgQsUyW6
 //  Call Entourage Config Loading by *.ent
 var decrypted = entourage.decrypt(null, encryptedData);
 
-console.log("Envt data converted to Env data", decrypted);
+console.log("Ent data converted to Env data", decrypted);
