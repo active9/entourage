@@ -1,9 +1,10 @@
 {
   "name": "entourage",
-  "version": "1.0.8",
+  "version": "3.0.1",
   "description": "A Secure production ready entourage for ENV variables",
   "main": "index.js",
   "scripts": {
+    "lint": "npx eslint *.js lib/*.js examples/*.js --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,19 +12,20 @@
     "environment",
     "secure",
     "production",
+    "ent",
     "entourage"
   ],
   "author": "Active 9 LLC.",
   "license": "MIT",
   "dependencies": {
-    "async": "^2.6.1",
-    "debug": "^4.0.1",
-    "glob": "^7.1.3",
-    "ini": "^1.3.5",
-    "simple-encryptor": "^2.0.0"
+    "async": "^3.2.1",
+    "debug": "^4.3.2",
+    "glob": "^7.2.0",
+    "ini": "^2.0.0",
+    "simple-encryptor": "^4.0.0"
   },
   "directories": {
-    "example": "examples"
+    "examples": "examples"
   },
   "repository": {
     "type": "git",
@@ -32,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/active9/entourage/issues"
   },
-  "homepage": "https://github.com/active9/entourage"
+  "homepage": "https://github.com/active9/entourage",
+  "engines": {
+    "node": ">=11.12.0"
+  }
 }

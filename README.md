@@ -1,7 +1,10 @@
 # Entourage
 A Secure production ready entourage for ENV variables
 
-# Installing Entourage
+### Requirements
+Node 11.12.0+
+
+### Installing Entourage
 
 Using npm
 
@@ -9,7 +12,7 @@ Using npm
 npm install --save entourage
 ```
 
-# Setup
+### Setup
 
 Entourage is a secure Environment Variable loader for production use. Before we begin there are a few things to take note of:
 
@@ -34,9 +37,9 @@ On Linux / Mac:
 export ENTOURAGE_KEY=[your key here without brackets]
 ```
 
-# Usage
+### Usage
 
-There are two parts, the Generator and the Config. The Generator helps you easily convert .env files to .ent files. .env fils are ini files without headers (comments are still allowed if the line starts with a semicolon ;)
+There are two parts, the Generator and the Config. The Generator helps you easily convert .env files to .ent files. .env files are ini files without headers (comments are still allowed if the line starts with a semicolon ;)
 
 To get started make yourself an .env file if you have no already. Inside put the contents:
 
@@ -100,7 +103,7 @@ The output will be:
 ENV Test true
 ```
 
-# API
+### API
 
 You can manually tie into the encrypt and decrypt features. By default if a key is passed as null the env ENTOURAGE_KEY will be used.
 
@@ -116,11 +119,11 @@ Decrypting
 var decrypted = entourage.decrypt(null, 'encrypted .ent file data here');
 ```
 
-# Options
+### Options
 
 Strict: boolean
 This option will remove any found .env files good for use in production environments where you want to ensure no .env files exist on the server running this module.
 
-# Conclusion
+### Conclusion
 
 Providing you create a secure enough key for Entourage to use and the user of your system is never exploited by a hacker to read your ENTOURAGE_KEY then, this should be secure enough to use in production environments. This has been tested and is in use in a production environment however, there is no guarantee your environment variables will remain secure since the decryption key is stored as an environment variable on the system you wish to deploy to. Use at your own risk. But!!! it should be safe so long as you can lock down your user level console on your deployed operating system (block ssh from public, disable PAM , and use a vpn for key based access).
